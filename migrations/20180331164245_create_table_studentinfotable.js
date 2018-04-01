@@ -17,7 +17,7 @@ exports.up = function(knex, Promise) {
     // linke to deployed capstone project
     table.string('capstonelink');
     // blurb describing the capstone project
-    table.string('capstonedesc');
+    table.string('capstonedesc', 1000);
     // q1 project
     table.string('q1project');
     // q2 project
