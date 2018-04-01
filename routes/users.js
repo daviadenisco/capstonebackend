@@ -1,18 +1,19 @@
-var express = require('express');
-var router = express.Router();
+// var express = require('express');
+// var router = express.Router();
+const app = require('express').Router();
 const knex = require('../db');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+app.get('/', function(req, res, next) {
   res.send('The slash route is working!');
 });
 
-router.get('/studentinfotable', (req, res) => {
+app.get('/studentinfotable', (req, res) => {
   // this returns an array of objects representing all the rows in the table and all the columns in the rows
   knex('studentinfotable').then(rows => res.json(rows));
 })
 
-router.get('/studentinfotable/:id', (req, res) => {
+app.get('/studentinfotable/:id', (req, res) => {
   // access the request object, tack on parameters and then the id
   const studentinfotableid = req.params.id;
   knex('studentinfotable').where('id', studentinfotableid) // SELECT * from studentinfotable WHERE id=studentinfotableid
@@ -24,7 +25,7 @@ router.get('/studentinfotable/:id', (req, res) => {
   })
 })
 
-router.patch('/studentinfotable/:id', (req, res) => {
+app.patch('/studentinfotable/:id', (req, res) => {
   // headshot, fullname, github, linkedin, email, personalsite, capstonelink, capstonedesc, q1project, q2project, q3project, bio, funfact, funpic, requestresume, extraspace1, extraspace2, extraspace3, extraspace4, extraspace5
   const studentinfotableid = req.params.id;
   // debug with console.log(`req.body: ${res.body}`);
@@ -40,7 +41,7 @@ router.patch('/studentinfotable/:id', (req, res) => {
   });
 });
 
-router.delete('/studentinfotable/:id', (req, res) => {
+app.delete('/studentinfotable/:id', (req, res) => {
   const studentid = req.params.id;
   knex('studentinfotable')
   .where('id', studentid)
@@ -48,4 +49,4 @@ router.delete('/studentinfotable/:id', (req, res) => {
   .then(res.send('Deleted'));
 });
 
-module.exports = router;
+module.exports = app;

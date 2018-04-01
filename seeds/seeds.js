@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
         q3project: "https://g72bestwebdevs.herokuapp.com/",
         bio: "I'm a software engineer based in New York City, where I was born and raised. After graduating from Drew University with a double major in Fine Art and History, I worked in event management for The Estée Lauder Companies, and then for The Open Society Foundations. I'm currently looking for a full-time position as a software engineer. In the meantime, I'm working on several freelance projects and will soon be teaching an intro to HTML, CSS, and JavaScript class. In my free time, I like to rescue cats, kiss wolves, and hike across volcanoes.",
         funfact: "I once found a message in a bottle on a beach.",
-        funpic: "",
+        funpic: "https://imgur.com/FSdo8WG",
         requestresume: "mailto:davia@daviadenisco.com",
         extraspace1: "",
         extraspace2: "",

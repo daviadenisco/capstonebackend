@@ -25,7 +25,7 @@ exports.up = function(knex, Promise) {
     // q3 project
     table.string('q3project');
     // brief bio
-    table.string('bio');
+    table.string('bio', 1000);
     // fun fact
     table.string('funfact');
     // fun pic
