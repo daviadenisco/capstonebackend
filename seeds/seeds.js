@@ -27,7 +27,7 @@ exports.seed = function(knex, Promise) {
         extraspace5: ""
       }, {
         id: 2,
-        headshot: "https://i.imgur.com/wya2YOA.jpg",
+        headshot: "https://i.imgur.com/XnRCSeQ.jpg",
         fullname: "David Nyman",
         github: "https://github.com/davidnymanmusic",
         linkedin: "https://www.linkedin.com/in/david-nyman-a65a8a17/",

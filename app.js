@@ -4,7 +4,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const knex = require('./db');
 const createError = require('http-errors');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
